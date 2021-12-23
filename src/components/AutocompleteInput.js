@@ -36,11 +36,22 @@ export default class AutocompleteInput extends Component {
   render() {
     return (
       <div className="autocomplete-container">
-        <input type="text" placeholder="Type the name of a country..." value={this.state.inputText} onChange={e => this.changeInputText(e)} />
+        <input
+          type="text"
+          placeholder="Type the name of a country..."
+          value={this.state.inputText}
+          onChange={e => this.changeInputText(e)}
+        />
         <div className="autocomplete-options">
           {
             this.state.showOptions && this.state.options.map(filteredOption => (
-              <div className="autocomplete-option" key={filteredOption.name.common} onClick={() => this.selectOption(filteredOption.name.official)}>{filteredOption.name.official}</div>
+              <div
+                className="autocomplete-option"
+                key={filteredOption.name.common}
+                onClick={() => this.selectOption(filteredOption.name.official)}
+              >
+                {filteredOption.name.official}
+              </div>
             ))
           }
           {

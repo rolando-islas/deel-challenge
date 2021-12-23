@@ -28,11 +28,22 @@ export default function FunctionAutocompleteInput() {
 
   return (
     <div className="autocomplete-container">
-      <input type="text" placeholder="Type the name of a country..." value={inputText} onChange={e => changeInputText(e)} />
+      <input
+        type="text"
+        placeholder="Type the name of a country..."
+        value={inputText}
+        onChange={e => changeInputText(e)}
+      />
       <div className="autocomplete-options">
         {
           showOptions && options.map(filteredOption => (
-            <div className="autocomplete-option" key={filteredOption.name.common} onClick={() => selectOption(filteredOption.name.official)}>{filteredOption.name.official}</div>
+            <div
+              className="autocomplete-option"
+              key={filteredOption.name.common}
+              onClick={() => selectOption(filteredOption.name.official)}
+            >
+              {filteredOption.name.official}
+            </div>
           ))
         }
         {
