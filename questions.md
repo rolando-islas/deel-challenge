@@ -1,7 +1,9 @@
 1. What is the difference between Component and PureComponent? Give an example where it might break my app.
+
     The difference between them is that Component doesn't implement shouldComponentUpdate(), and a PureComponent does. PureComponent only rerenders if its own props or state change.
 
 2. Context + ShouldComponentUpdate might be dangerous. Can think of why is that?
+
     There might be issues in which some components need to rerender after updating the context values and they will not rerender because of the implementation of ShouldComponentUpdate.
 
 3. Describe 3 ways to pass information from a component to its PARENT.
@@ -14,6 +16,7 @@
     * By using a PureComponent instead of a Component.
 
 5. What is a fragment and why do we need it? Give an example where it might break my app.
+
     A fragment is used when you need to return multiple elements in a component instead of just one.
 
 6. Give 3 examples of the HOC pattern.
@@ -22,6 +25,7 @@
     * It can also be used for styling components with reusable elements and styles. You can create a HOC that returns a container with the component as a children.
 
 7. What's the difference in handling exceptions in promises, callbacks and async...await.
+
     When you use promises, you have to chain methods for executing code after the promise has resolved. For handling exceptions, you need to chaing the catch method:
     ```js
     function getAsyncData() {
@@ -41,6 +45,7 @@
     ```
 
 8. How many arguments does setState take and why is it async.
+
     It takes 2 arguments: the new state values in an object, and a callback function that is called after the state is updated.
     It is async because it handles the updates in batches. This is to avoid rerendering a component multiple times.
 
