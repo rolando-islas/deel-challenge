@@ -1,8 +1,8 @@
-import React from 'react';
+import { Component } from 'react';
 
 import getData from '../api';
 
-export default class AutocompleteInput extends React.Component {
+export default class AutocompleteInput extends Component {
   constructor() {
     super();
 
@@ -10,12 +10,12 @@ export default class AutocompleteInput extends React.Component {
       options: [],
       inputText: '',
       showOptions: false
-    }
+    };
   }
   async componentDidMount() {
     const data = await getData();
 
-    this.setState({ options: data })
+    this.setState({ options: data });
   }
   selectOption(selectedOption) {
     this.setState({
@@ -31,7 +31,7 @@ export default class AutocompleteInput extends React.Component {
       const options = await getData(this.state.inputText);
 
       this.setState({ options: options });
-    })
+    });
   }
   render() {
     return (

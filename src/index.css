@@ -11,21 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-.autocomplete-container {
-  width: 400px;
-}
-
-.autocomplete-options {
-  height: 175px;
-  overflow-y: scroll;
-}
-
-.autocomplete-option {
-  cursor: pointer;
-}
-
-.autocomplete-option:hover {
-  background: black;
-  color: white;
-}
