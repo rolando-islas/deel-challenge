@@ -6,10 +6,14 @@ export default function FunctionAutocompleteInput() {
   const [inputText, setInputText] = useState('');
   const [showOptions, setShowOptions] = useState(false);
 
-  useEffect(async () => {
-    const data = await getData();
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getData();
 
-    setOptions(data);
+      return data;
+    }
+
+    setOptions(fetchData());
   }, []);
 
   const selectOption = (selectedOption) => {
