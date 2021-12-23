@@ -1,3 +1,7 @@
+/*
+ * I decided to put all the styles here for this test. But I would create a separate module for the styles of each component.
+ */
+
 .App {
   display: flex;
   flex-direction: column;

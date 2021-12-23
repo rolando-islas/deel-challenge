@@ -10,10 +10,10 @@ export default function FunctionAutocompleteInput() {
     const fetchData = async () => {
       const data = await getData();
 
-      return data;
+      setOptions(data);
     }
 
-    setOptions(fetchData());
+    fetchData();
   }, []);
 
   const selectOption = (selectedOption) => {

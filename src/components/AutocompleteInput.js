@@ -1,5 +1,6 @@
 import { Component } from 'react';
 
+// In a real app I would create an alias for importing modules. I usually use @ as an alias for src folder instead of using relative paths.
 import getData from '../api';
 
 export default class AutocompleteInput extends Component {
@@ -23,6 +24,7 @@ export default class AutocompleteInput extends Component {
       inputText: selectedOption
     });
   }
+  // In a real app, I would debounce this function to avoid calling the API a lot.
   changeInputText(e) {
     this.setState({
       inputText: e.target.value,
